@@ -1,0 +1,90 @@
+{
+  "name": "unplugin-starter2",
+  "version": "0.0.2",
+  "packageManager": "pnpm@7.9.0",
+  "description": "unplugin-starter2",
+  "keywords": [
+    "unplugin",
+    "unplugin-starter2"
+  ],
+  "license": "MIT",
+  "author": "tangdaoyuan <1197633750@qq.com> (https://github.com/tangdaoyuan/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangdaoyuan/unplugin-starter2.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./vite": {
+      "require": {
+        "types": "./dist/vite.d.ts",
+        "default": "./dist/vite.cjs"
+      },
+      "import": {
+        "types": "./dist/vite.d.ts",
+        "default": "./dist/vite.mjs"
+      }
+    },
+    "./types": {
+      "require": "./dist/types.cjs",
+      "import": "./dist/types.mjs",
+      "types": "./dist/types.d.ts"
+    },
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist",
+    "*.d.ts",
+    "@types"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "node ./src/index.ts",
+    "play": "npm -C playground run dev",
+    "stub": "unbuild --stub",
+    "build": "unbuild",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp --tag --commit --push && pnpm publish"
+  },
+  "bugs": {
+    "url": "https://github.com/tangdaoyuan/unplugin-starter2/issues"
+  },
+  "homepage": "https://github.com/tangdaoyuan/unplugin-starter2#readme",
+  "peerDependencies": {
+    "esbuild": "*",
+    "rollup": "*",
+    "vite": "*"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "magic-string": "^0.26.2",
+    "picocolors": "^1.0.0",
+    "unplugin": "^0.9.0"
+  },
+  "devDependencies": {
+    "@suger-tdy/eslint-config": "1.1.9",
+    "bumpp": "8.2.1",
+    "esbuild": "0.14.53",
+    "eslint": "8.21.0",
+    "typescript": "4.7.4",
+    "unbuild": "0.7.6",
+    "vite": "3.0.4",
+    "vitest": "0.21.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
