@@ -8,7 +8,7 @@ export default createUnplugin<GeneralOptions>(() => {
       return id.endsWith('.tsx') || id.endsWith('.jsx')
     },
     transform(_code: string, _id: string) {
-      return null
+      return _code.replace(/className/g, 'class')
     },
   }
 })
