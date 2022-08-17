@@ -21,7 +21,7 @@
       "@/*": [
         "src/*"
       ],
-      "unplugin-starter2/*": [
+      "unplugin-jsx-class-transform/*": [
         "dist/*"
       ]
     }

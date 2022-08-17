@@ -1,17 +1,17 @@
 {
-  "name": "unplugin-starter2",
+  "name": "unplugin-jsx-class-transform",
   "version": "0.0.2",
   "packageManager": "pnpm@7.9.0",
-  "description": "unplugin-starter2",
+  "description": "unplugin-jsx-class-transform",
   "keywords": [
     "unplugin",
-    "unplugin-starter2"
+    "unplugin-jsx-class-transform"
   ],
   "license": "MIT",
   "author": "tangdaoyuan <1197633750@qq.com> (https://github.com/tangdaoyuan/)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tangdaoyuan/unplugin-starter2.git"
+    "url": "git+https://github.com/tangdaoyuan/unplugin-jsx-class-transform.git"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -58,9 +58,9 @@
     "release": "bumpp --tag --commit --push && pnpm publish"
   },
   "bugs": {
-    "url": "https://github.com/tangdaoyuan/unplugin-starter2/issues"
+    "url": "https://github.com/tangdaoyuan/unplugin-jsx-class-transform/issues"
   },
-  "homepage": "https://github.com/tangdaoyuan/unplugin-starter2#readme",
+  "homepage": "https://github.com/tangdaoyuan/unplugin-jsx-class-transform#readme",
   "peerDependencies": {
     "esbuild": "*",
     "rollup": "*",
