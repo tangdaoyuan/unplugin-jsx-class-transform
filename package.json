@@ -45,6 +45,7 @@
     "@types"
   ],
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "test": "vitest",
     "test:run": "vitest run",
     "typecheck": "tsc --noEmit",
