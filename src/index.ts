@@ -1,6 +1,10 @@
 import { createUnplugin } from 'unplugin'
 import type { GeneralOptions } from './types'
 
+export function transform(_code: string, _id: string) {
+  return _code.replace(/(?<=\<(.*[\n]*)*\s+)className(?=\=[\"\{].*[\"\}][^<]*\>)/mg, 'class')
+}
+
 export default createUnplugin<GeneralOptions>(() => {
   return {
     name: 'unplugin-jsx-class-transform',
@@ -8,7 +12,7 @@ export default createUnplugin<GeneralOptions>(() => {
       return id.endsWith('.tsx') || id.endsWith('.jsx')
     },
     transform(_code: string, _id: string) {
-      return _code.replace(/className/g, 'class')
+      return transform(_code, _id)
     },
   }
 })
