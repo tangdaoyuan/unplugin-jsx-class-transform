@@ -56,7 +56,7 @@
     "stub": "unbuild --stub",
     "build": "unbuild",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp --tag --commit --push && pnpm publish"
+    "release": "bumpp --tag --commit --push"
   },
   "bugs": {
     "url": "https://github.com/tangdaoyuan/unplugin-jsx-class-transform/issues"
