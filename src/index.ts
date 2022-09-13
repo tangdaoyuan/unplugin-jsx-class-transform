@@ -7,6 +7,7 @@ export function transform(_code: string, _id: string) {
 
 export default createUnplugin<GeneralOptions>(() => {
   return {
+    enforce: 'pre',
     name: 'unplugin-jsx-class-transform',
     transformInclude(id: string) {
       return id.endsWith('.tsx') || id.endsWith('.jsx')
