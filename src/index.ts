@@ -2,7 +2,7 @@ import { createUnplugin } from 'unplugin'
 import type { GeneralOptions } from './types'
 
 export function transform(_code: string, _id: string) {
-  return _code.replace(/(?<=\<(.*[\n]*)*\s+)className(?=\=[\"\{].*[\"\}][^<]*\>)/mg, 'class')
+  return _code.replace(/(?<=\<[a-zA-Z0-9-]+[\s\n]+(?!.*\/\>)*((.*\n)*|(.*))\s*class(?=Name))Name(?=\=[\"\{].*[\"\}][^<]*\>)/gm, '')
 }
 
 export default createUnplugin<GeneralOptions>(() => {
