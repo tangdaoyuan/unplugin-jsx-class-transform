@@ -1,6 +1,6 @@
 {
   "name": "unplugin-jsx-class-transform",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "packageManager": "pnpm@7.9.0",
   "description": "unplugin-jsx-class-transform",
   "keywords": [
